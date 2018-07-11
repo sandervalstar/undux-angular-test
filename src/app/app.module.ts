@@ -5,18 +5,23 @@ import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
 import { DisplayComponent } from './display/display.component';
 import { FormsModule } from '@angular/forms';
+import { DisplayServiceComponent } from './display-service/display-service.component';
+import { MyStoreService } from './my-store.service';
+import { ButtonServiceComponent } from './button-service/button-service.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
-    DisplayComponent
+    DisplayComponent,
+    DisplayServiceComponent,
+    ButtonServiceComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [MyStoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

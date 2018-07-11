@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Store } from 'undux';
 import { MyStore } from '../app.store';
 
@@ -9,14 +9,11 @@ import { MyStore } from '../app.store';
       {{store.get('buttonText')}}
     </button>`
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
 
   @Input() store: Store<MyStore>;
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
 }

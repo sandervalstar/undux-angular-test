@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Store } from 'undux';
 import { MyStore } from '../app.store';
 
@@ -6,14 +6,11 @@ import { MyStore } from '../app.store';
   selector: 'app-display',
   template: `<p>{{store.get('clickCount')}}</p>`,
 })
-export class DisplayComponent implements OnInit {
+export class DisplayComponent {
 
   @Input() store: Store<MyStore>;
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
 }

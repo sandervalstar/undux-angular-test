@@ -2,6 +2,8 @@
 
 This is a test project to try out [Undux](https://github.com/bcherny/undux) state management in Angular.
 
+To try it out first run `npm install` and then follow the guide below before you try to run `npm start`. 
+
 Because Undux is made for React and TypeScript 2.8+ this project only compiles if you make the following modifications to Undux:
 
 * comment out `node_modules/undux/dist/src/react.js`

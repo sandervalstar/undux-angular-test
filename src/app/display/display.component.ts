@@ -1,16 +1,10 @@
-import { Component, Input } from '@angular/core';
-import { Store } from 'undux';
-import { MyStore } from '../app.store';
+import { Component } from '@angular/core';
+import { MyStoreService } from '../my-store.service';
 
 @Component({
   selector: 'app-display',
   template: `<p>{{store.get('clickCount')}}</p>`,
 })
 export class DisplayComponent {
-
-  @Input() store: Store<MyStore>;
-
-  constructor() {
-  }
-
+  constructor(public store: MyStoreService) {}
 }

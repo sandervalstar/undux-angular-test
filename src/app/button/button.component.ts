@@ -1,19 +1,17 @@
-import { Component, Input } from '@angular/core';
-import { Store } from 'undux';
-import { MyStore } from '../app.store';
+import { Component } from '@angular/core';
+import { MyStoreService } from '../my-store.service';
 
 @Component({
   selector: 'app-button',
   template: `
-    <button (click)="store.set('clickCount')(store.get('clickCount') + 1)">
+    <button (click)="incrementClickCount()">
       {{store.get('buttonText')}}
-    </button>`
+    </button>`,
 })
 export class ButtonComponent {
+  constructor(public store: MyStoreService) {}
 
-  @Input() store: Store<MyStore>;
-
-  constructor() {
+  incrementClickCount() {
+    this.store.set('clickCount')(this.store.get('clickCount') + 1);
   }
-
 }

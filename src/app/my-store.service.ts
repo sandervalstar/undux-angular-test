@@ -1,19 +1,25 @@
+import { environment } from './../environments/environment';
 import { Injectable } from '@angular/core';
-import { MyStore } from './app.store';
 import { StoreDefinition } from 'undux';
 
+interface MyStore {
+  buttonText: string;
+  clickCount: number;
+}
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MyStoreService extends StoreDefinition<MyStore> {
-
   constructor() {
-    super({
-      buttonText: 'Click Me',
-      clickCount: -1
-    }, {
-      isDevMode: false
-    });
+    super(
+      {
+        buttonText: 'Click Me',
+        clickCount: 0,
+      },
+      {
+        isDevMode: !environment.production,
+      }
+    );
   }
-
 }

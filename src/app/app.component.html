@@ -1,15 +1,11 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <h1>Undux Angular Test</h1>
 <div>
   <button (click)="changeTheButtonText()">change the button text</button>
   <input type="text" [(ngModel)]="inputText" #ctrl="ngModel" required>
 </div>
 
-<h2>Using Property Binding</h2>
-<app-button [store]="store"></app-button>
-<app-display [store]="store"></app-display>
+<h2>Button</h2>
+<app-button></app-button>
 
-
-<h2>Using Injectable Service</h2>
-<app-button-using-service></app-button-using-service>
-<app-display-using-service></app-display-using-service>
+<h2>Display</h2>
+<app-display></app-display>

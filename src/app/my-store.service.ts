@@ -8,7 +8,7 @@ import {
 } from 'undux';
 import { environment } from '../environments/environment';
 
-interface MyStore {
+export interface MyStore {
   buttonText: string;
   clickCount: number;
 }

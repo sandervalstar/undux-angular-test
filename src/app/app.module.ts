@@ -5,9 +5,15 @@ import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
 import { DisplayComponent } from './display/display.component';
 import { myStoreFactory, MyStoreService } from './my-store.service';
+import { SnapshotComponent } from './snapshot/snapshot.component';
 
 @NgModule({
-  declarations: [AppComponent, ButtonComponent, DisplayComponent],
+  declarations: [
+    AppComponent,
+    ButtonComponent,
+    DisplayComponent,
+    SnapshotComponent,
+  ],
   imports: [BrowserModule, FormsModule],
   providers: [{ provide: MyStoreService, useFactory: myStoreFactory }],
   bootstrap: [AppComponent],

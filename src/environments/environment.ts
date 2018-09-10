@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  useUnduxReduxDevTools: true,
+  useUnduxLogger: true,
 };
 
 /*
